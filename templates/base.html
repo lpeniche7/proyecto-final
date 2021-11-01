@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aeropuerto Rafael Nuñez</title> 
+<link rel="stylesheet" href="{{ url_for('static', filename= 'css/style.css') }}">
+</head>
+<body>
+	<div class="container">
+		<div class="navigation">
+			<ul>
+				<li>
+					<a href="#">
+						<span class="icon"><ion-icon name="airplane-outline"></ion-icon></ion-icon></span>
+						<span class="title" style="font-size: 1.0em;font-weight: 500;">Aeropuerto Rafael Nuñez</span>
+					</a>
+					<a href="#">
+						<span class="title2" style="font-size: 1.2em;font-weight: 500;">Dashboard Pasajero</span>
+					</a>
+				</li>
+                
+				{% block contenido %}
+
+                {% endblock %}
+				
+			</ul>
+		</div>
+
+		<!-- main -->
+		<div class="main">
+			<div class="topbar">
+				<div class="toggle">
+					<ion-icon name="menu-outline"></ion-icon>
+				</div>
+				<!-- search -->
+				<div class="search">
+					<label>
+						<input type="text" placeholder="Buscar Vuelos">
+						<ion-icon name="search-outline"></ion-icon>
+					</label>
+				</div>
+				<!-- userImg -->
+				<div class="user">
+					<img src="user.jpg">
+				</div>
+			</div>
+			
+			<!-- cards -->
+			<div class="cardBox">
+				<div class="card">
+					<div>
+						<div class="numbers">1,504</div>
+						<div class="cardName">Visitas Diarias</div>
+					</div>
+					<div class="iconBx">
+						<ion-icon name="eye-outline"></ion-icon>
+					</div>
+				</div>
+				<div class="card">
+					<div>
+						<div class="numbers">80</div>
+						<div class="cardName">Total Vuelos</div>
+					</div>
+					<div class="iconBx">
+						<ion-icon name="airplane-outline"></ion-icon>
+					</div>
+				</div>
+				<div class="card">
+					<div>
+						<div class="numbers">20</div>
+						<div class="cardName">A Tiempo</div>
+					</div>
+					<div class="iconBx">
+						<ion-icon name="checkmark-circle-outline"></ion-icon>
+					</div>
+				</div>
+				<div class="card">
+					<div>
+						<div class="numbers">5</div>
+						<div class="cardName">Retrasados</div>
+					</div>
+					<div class="iconBx">
+						<ion-icon name="close-circle-outline"></ion-icon>
+					</div>
+				</div>
+				<div class="card">
+					<div>
+						<div class="numbers">25</div>
+						<div class="cardName">Aterrizados</div>
+					</div>
+					<div class="iconBx">
+						<ion-icon name="checkmark-done-circle-outline"></ion-icon>
+					</div>
+				</div>
+				<div class="card">
+					<div>
+						<div class="numbers">30</div>
+						<div class="cardName">Pilotos </div>
+					</div>
+					<div class="iconBx">
+						<ion-icon name="person-circle-outline"></ion-icon>
+					</div>
+				</div>
+				<div class="card">
+					<div>
+						<div class="numbers">3</div>
+						<div class="cardName">Usuarios</div>
+					</div>
+					<div class="iconBx">
+						<ion-icon name="person-outline"></ion-icon>
+					</div>
+				</div>
+				<div class="card">
+					<div>
+						<div class="numbers">200</div>
+						<div class="cardName">Comentarios</div>
+					</div>
+					<div class="iconBx">
+						<ion-icon name="chatbubble-ellipses-outline"></ion-icon>
+					</div>
+				</div>
+			</div>
+
+
+			
+			<div class="details">
+				<!-- order details list -->
+				<div class="recentOrders">
+					<div class="cardHeader">
+						<h2>Detalle de Vuelos</h2>
+						<a href="#" class="btn">Ver Todos</a>
+					</div>
+					<table>
+						<thead>
+							<tr>
+								<td>Codigo</td>
+								<td>Origen</td>
+								<td>Destino</td>
+								<td>Hora</td>
+								<td>Stado</td>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>AB50789</td>
+								<td>Cartagena</td>
+								<td>Bogota</td>
+								<td>8:00 am</td>
+								<td><span class="status delivered">A Tiempo</span></td>
+							</tr>
+							<tr>
+								<td>AB51789</td>
+								<td>Cartagena</td>
+								<td>Cali</td>
+								<td>9:00 am</td>
+								<td><span class="status pending">Retrasado</span></td>
+							</tr>
+							<tr>
+								<td>AB55968</td>
+								<td>Bucaramanga</td>
+								<td>Cartagena</td>
+								<td>9:00 am</td>
+								<td><span class="status return">Aterrizado</span></td>
+							</tr>
+							<td>AB50789</td>
+								<td>Cartagena</td>
+								<td>Bogota</td>
+								<td>8:00 am</td>
+								<td><span class="status delivered">A Tiempo</span></td>
+							</tr>
+							<tr>
+								<td>AB51789</td>
+								<td>Cartagena</td>
+								<td>Cali</td>
+								<td>9:00 am</td>
+								<td><span class="status pending">Retrasado</span></td>
+							</tr>
+							<tr>
+								<td>AB55968</td>
+								<td>Bucaramanga</td>
+								<td>Cartagena</td>
+								<td>9:00 am</td>
+								<td><span class="status return">Aterrizado</span></td>
+							</tr>
+							<td>AB50789</td>
+								<td>Cartagena</td>
+								<td>Bogota</td>
+								<td>8:00 am</td>
+								<td><span class="status delivered">A Tiempo</span></td>
+							</tr>
+							<tr>
+								<td>AB51789</td>
+								<td>Cartagena</td>
+								<td>Cali</td>
+								<td>9:00 am</td>
+								<td><span class="status pending">Retrasado</span></td>
+							</tr>
+							<tr>
+								<td>AB55968</td>
+								<td>Bucaramanga</td>
+								<td>Cartagena</td>
+								<td>9:00 am</td>
+								<td><span class="status return">Aterrizado</span></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+
+				<!-- New Customers -->
+				<div class="recentCustomers">
+					<div class="cardHeader">
+						<h2>Usuarios Recientes</h2>
+					</div>
+					<table>
+						<tr>
+							<td width="60px"><div class="imgBx"><img src="img1.jpg"></div></td>
+							<td><h4>David<br><span>Cartagena</span></h4></td>
+						</tr>
+						<tr>
+							<td><div class="imgBx"><img src="img2.jpg"></div></td>
+							<td><h4>Pedro<br><span>Barranquilla</span></h4></td>
+						</tr>
+						<tr>
+							<td><div class="imgBx"><img src="img3.jpg"></div></td>
+							<td><h4>Maria<br><span>Cali</span></h4></td>
+						</tr>
+						<tr>
+							<td><div class="imgBx"><img src="img4.jpg"></div></td>
+							<td><h4>Daniela<br><span>Bogota</span></h4></td>
+						</tr>
+						<tr>
+							<td><div class="imgBx"><img src="img5.jpg"></div></td>
+							<td><h4>Daniel<br><span>Bucaramanga</span></h4></td>
+						</tr>
+						<tr>
+							<td><div class="imgBx"><img src="img6.jpg"></div></td>
+							<td><h4>Ashraf<br><span>Santa Marta</span></h4></td>
+						</tr>
+						<tr>
+							<td><div class="imgBx"><img src="img7.jpg"></div></td>
+							<td><h4>Diana<br><span>Usa</span></h4></td>
+						</tr>
+						<tr>
+							<td><div class="imgBx"><img src="img8.jpg"></div></td>
+							<td><h4>Amit<br><span>Mexico</span></h4></td>
+						</tr>
+
+					</table>
+				</div>
+
+
+			</div>
+
+		</div>
+	</div>
+
+	<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+	<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+	
+	<script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.1/dist/chart.min.js"></script>
+	<script src="my_chart.js"></script>
+	<script>
+		// MenuToggle
+		let toggle = document.querySelector('.toggle');
+		let navigation = document.querySelector('.navigation');
+		let main = document.querySelector('.main');
+
+		toggle.onclick = function(){
+			navigation.classList.toggle('active');
+			main.classList.toggle('active');
+		}
+
+		// add hovered class in selected list item
+		let list = document.querySelectorAll('.navigation li');
+		function activeLink(){
+			list.forEach((item) =>
+			item.classList.remove('hovered'));
+			this.classList.add('hovered');
+		}
+		list.forEach((item) => 
+		item.addEventListener('mouseover',activeLink));
+	</script>
+</body>
+</html>

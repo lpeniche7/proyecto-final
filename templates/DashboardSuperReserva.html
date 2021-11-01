@@ -1,0 +1,58 @@
+{%  extends "baseSuperUsers.html" %}
+ 
+{% block contenido %}
+            <div class="details">
+                <!-- order details list -->
+                <div class="recentOrders">
+                    <div class="cardHeader">
+                        <h2>Hacer Reservas</h2>
+                    </div>
+                    <div class="cardHeader">
+                        <form action ="{{url_for('main.DashboardSuperUsers')}}" method="POST">
+                        <input type="text" name="nombre" placeholder="Nombre Completo">
+                        <input type="text" name="username" placeholder="Nombre Usuario">
+                        <input type="email" name="correo" placeholder="Correo Electronico">
+                        <input type="password" name="clave" placeholder="Contraseña"> 
+                        <input type="text" name="tipo_user" placeholder="Tipo de Usuario"> 
+                        <button class="form__button" value="Enviar" type="submit">Guardar</button>
+                    </div>
+                     
+            <div class="details">
+                <!-- order details list -->
+                <div class="recentOrders">
+                    <div class="cardHeader">
+                        <h2>Vuelos Reservados</h2>
+                    </div>
+                     <table>
+                        <thead>
+                            <tr>
+                                <td>Origen</td>
+                                <td>Destino</td>
+                                <td>Capacidad</td>
+                                <td>Avion</td>
+                               
+                                <td>Estado</td>                                
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for reserva in reservas %}
+                            <tr>
+                                <td>{{reserva.0}}</td>
+                                <td>{{reserva.1}}</td>
+                                <td>{{reserva.2}}</td>
+                                <td>{{reserva.3}}</td>
+                                <td>{{reserva.4}}</td>
+                                <td>{{reserva.5}}</td>
+                                <td>{{reserva.6}}</td>
+                                <td>{{reserva.7}}</td>
+                                <td><a href="/DashboardSuperUsersEdit/{{reservas.1}}"><ion-icon name="create-outline"></ion-icon></a></td>
+                                <td><a href="/DashboardSuperVuelosDelete/{{reservas.1}}"><ion-icon name="trash-outline"></ion-icon></a></td>
+                            </tr>
+                            {% endfor %}
+                                                      
+                        </tbody>
+                     </table>
+                    </div>
+                </div>
+             </div>   
+    {% endblock %}

@@ -1,0 +1,27 @@
+<html>
+   <head>
+       <script src="{{ url_for('static', filename='js/funciones.js') }}"></script>
+       <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/mioCSS.css') }}" />
+	   <title>{% block titulo %} {% endblock %}</title>
+	   <meta charset="UTF-8"/>
+      <link rel="shortcut icon" type="image/png" href="{{ url_for('static', filename='img/favicon.png')}}"/>
+   </head>
+   <body>
+    <h1>Esta es la empresa número 1 en servicios</h1>
+    <p>Nombre: {{session['nombre']}}</p>
+      <p>Usuario: {{session['usuario']}}</p>
+
+      <p><a href="{{url_for('main.logout')}}">Salir</a></p>
+      
+    {% for mensaje in get_flashed_messages() %}
+
+      <div class="error">{{ mensaje }}</div>
+
+    {% endfor %}
+    
+    {% block contenido %} {% endblock %}
+
+    
+      
+   </body>
+</html>

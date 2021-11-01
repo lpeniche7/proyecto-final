@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aeropuerto Rafael Nuñez</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'css/styleSuperUsers.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="navigation">
+            <ul>
+                <li>
+                    <a href="#">
+                        <img class="img-ppal" src="/static/img/logo_rafa.png" alt="Logo">
+                        
+                </li>
+
+                <li>
+                    <a href="{{url_for('main.DashboardPiloto')}}">
+                        <span class="icon">
+                            <ion-icon name="accessibility-outline"></ion-icon>
+                        </span>
+                        <span class="title">Perfil Piloto</span>
+                    </a>
+                </li>
+                 <li>
+                    <a href="{{url_for('main.DashboardPilotoVuelos')}}">
+                        <span class="icon">
+                            <ion-icon name="paper-plane-outline"></ion-icon>
+                        </span>
+                        <span class="title">Vuelos</span>
+                    </a>
+                </li>
+                 <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="lock-closed-outline"></ion-icon>
+                        </span>
+                        <span class="title">Contraseña</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{url_for('main.logout')}}">
+                        <span class="icon">
+                            <ion-icon name="log-out-outline"></ion-icon>
+                        </span>
+                        <span class="title">Salir</span>
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+
+        <!-- main -->
+        <div class="main">
+            <div class="topbar">
+                
+                <!-- search -->
+               
+                <!-- userImg -->
+               
+            </div>
+                {% block contenido %}
+
+                {% endblock %}
+        </div>
+    </div>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.1/dist/chart.min.js"></script>
+    <script src="my_chart.js"></script>
+    <script>
+        // MenuToggle
+        let toggle = document.querySelector('.toggle');
+        let navigation = document.querySelector('.navigation');
+        let main = document.querySelector('.main');
+
+        toggle.onclick = function () {
+            navigation.classList.toggle('active');
+            main.classList.toggle('active');
+        }
+
+        // add hovered class in selected list item
+        let list = document.querySelectorAll('.navigation li');
+
+        function activeLink() {
+            list.forEach((item) =>
+                item.classList.remove('hovered'));
+            this.classList.add('hovered');
+        }
+        list.forEach((item) =>
+            item.addEventListener('mouseover', activeLink));
+    </script>
+</body>
+
+</html>
